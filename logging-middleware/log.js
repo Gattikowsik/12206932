@@ -1,5 +1,4 @@
-// log.js
-import axios from "axios";
+const axios = require("axios");
 
 const VALID_STACKS = ["backend", "frontend"];
 const VALID_LEVELS = ["debug", "info", "warn", "error", "fatal"];
@@ -14,7 +13,7 @@ const VALID_PACKAGES = {
   both: ["auth", "config", "middleware", "utils"]
 };
 
-export async function Log(stack, level, packageName, message) {
+async function Log(stack, level, packageName, message) {
   if (!VALID_STACKS.includes(stack)) {
     console.error("Invalid stack provided");
     return;
@@ -44,3 +43,5 @@ export async function Log(stack, level, packageName, message) {
     console.error("Failed to log:", error.message);
   }
 }
+
+module.exports = { Log };
