@@ -1,0 +1,1 @@
+A full-stack URL shortener built using the MERN stack (MongoDB, Express, React, Node.js). It allows users to shorten long URLs and track click analytics with a clean, responsive UI.
