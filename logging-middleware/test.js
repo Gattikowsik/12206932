@@ -1,5 +1,5 @@
 // test.js
-import { Log } from "./log.js";
+const { Log } = require("./log.js");
 
 // Example 1: Valid log
 Log("backend", "error", "handler", "received string, expected bool");
